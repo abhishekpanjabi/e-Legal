@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Election Commission of India</title>
+  <meta name="title" content="Election Commission of India" />
+   <link rel="shortcut icon" id="favicon" href="favicon.png"> 
+  <meta name="author" content="Technology Infinity Developers">
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Pacifico:400' rel='stylesheet' type='text/css'>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+  <script type="text/javascript" src="jquery.onepage-scroll.js"></script>
+  <link href='onepage-scroll.css' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="initial-scale=1, width=device-width, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background: #E2E4E7;
+      padding: 0;
+      text-align: center;
+      font-family: 'open sans';
+      position: relative;
+      margin: 0;
+      height: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    .wrapper {
+      height: 100% !important;
+      height: 100%;
+      margin: 0 auto; 
+      overflow: hidden;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    
+    h1, h2 {
+      width: 100%;
+      float: left;
+    }
+    h1 {
+      margin-top: 100px;
+      color: #000;
+      margin-bottom: 5px;
+      font-size: 70px;
+      letter-spacing: -4px;
+      font-weight: 100;
+    }
+   
+    h2 {
+      color: #6D461D;
+      font-weight: 100;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    
+    .pointer {
+      color: #9b59b6;
+      font-family: 'Pacifico', cursive;
+      font-size: 30px;
+      margin-top: 15px;
+    }
+    code {
+      margin: 20px 1%;
+      float: left;
+      width: 48%;
+      height: 105px;
+      background: rgba(0,0,0,0.1);
+      border: rgba(0,0,0,0.05) 5px solid;
+      border-radius: 5px;
+      padding:5px;
+      color: white;
+      text-align: center;
+      font-size: 15px;
+      margin-top: 25px;
+      display: block;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+    }
+    code.html {
+      color: #7EC9E6;
+    }
+    code.js {
+      color: #FFAD00;
+    }
+
+    .main {
+      float: left;
+      width: 100%;
+      margin: 0 auto;
+    }
+    
+    .main h1 {
+      padding:150px 50px;
+      float: left;
+      width: 100%;
+      font-size: 45px;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: 100;
+      color: white;
+      margin: 0;
+    }
+   
+    .main h1.demo1 {
+      background: #1ABC9C;
+    }
+    
+    .reload.bell {
+      font-size: 12px;
+      padding: 20px;
+      width: 45px;
+      text-align: center;
+      height: 47px;
+      border-radius: 50px;
+      -webkit-border-radius: 50px;
+      -moz-border-radius: 50px;
+    }
+    
+    .reload.bell #notification {
+      font-size: 25px;
+      line-height: 140%;
+    }
+    
+    .reload, .btn{
+      display: inline-block;
+      border: 4px solid #A2261E;
+      border-radius: 5px;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      background: #CC3126;
+      display: inline-block;
+      line-height: 100%;
+      padding: 0.7em;
+      text-decoration: none;
+      color: #fff;
+      width: 100px;
+      line-height: 140%;
+      font-size: 17px;
+      font-family: open sans;
+      font-weight: bold;
+    }
+    .reload:hover{
+      background: #444;
+    }
+    .btn {
+      width: 200px;
+      color: rgb(255, 255, 255);
+      border: 4px solid rgb(0, 0, 0);
+      background: rgba(3, 3, 3, 0.75);
+    }
+    .clear {
+      width: auto;
+    }
+    .btn:hover, .btn:hover {
+      background: #444;
+    }
+    .btns {
+      width: 410px;
+      margin: 50px auto;
+    }
+    .credit {
+      text-align: center;
+      color: rgba(0,0,0,0.5);
+      padding: 10px;
+      width: 410px;
+      clear: both;
+    }
+    .credit a {
+      color: rgba(0,0,0,0.85);
+      text-decoration: none;
+      font-weight: bold;
+      text-align: center;
+    }
+    
+    .back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      text-align: center;
+      display: block;
+      padding: 7px;
+      width: 100%;
+      box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.25);
+      font-weight: bold;
+      font-size: 13px;
+      color: #000;
+      -webkit-transition: all 500ms ease-in-out;
+      -moz-transition: all 500ms ease-in-out;
+      -o-transition: all 500ms ease-in-out;
+      transition: all 500ms ease-in-out;
+    }
+    .back:hover {
+      color: black;
+      background: rgba(255, 255, 255, 0.5);
+    }
+    
+    header {
+      position: relative;
+      z-index: 10;
+    }
+    .main section .page_container {
+      position: relative;
+      
+      bottom: 0%;
+      margin: 0 auto 0;
+      max-width: 950px;
+      z-index: 3;
+    }
+    .main section  {
+      overflow: hidden;
+    }
+    
+    .main section > img {
+      position: absolute;
+      max-width: 100%;
+      z-index: 1;
+    }
+    
+    .main section.page1 {
+      background:#06213f;
+    }
+    .main section.page1 h1 {
+      text-align: left;
+      padding: 0;
+      margin-bottom: 15px;
+      font-size: 70px;
+      color: #ff9800;
+    }
+    .main section.page1 h2 {
+      color: #ffff00;
+      text-align: center;
+      font-size: 60px;
+      width: 90%;
+      line-height: 160%;
+    }
+    .main section .page_container .btns {
+      clear: both;
+      float: left;
+      text-align: center;
+      width: 435px;
+    }
+    .main section .page_container .btns a{
+      text-align: center;
+    }
+    
+    
+    body.disabled-onepage-scroll .onepage-wrapper  section {
+      min-height: 100%;
+      height: auto;
+    }
+    
+    body.disabled-onepage-scroll .main section .page_container, body.disabled-onepage-scroll .main section.page3 .page_container  {
+      padding: 20px;
+      margin-top: 150px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+    
+    body.disabled-onepage-scroll  section .page_container h1{
+      text-align: center;
+      font-size: 50px;
+    }
+    body.disabled-onepage-scroll section .page_container h2, body.disabled-onepage-scroll section .page_container .credit, body.disabled-onepage-scroll section .page_container .btns{
+      text-align: center;
+      width: 100%;
+    }
+    
+    body.disabled-onepage-scroll .main section.page1 > img {
+      position: absolute;
+      width: 80%;
+      left: 10%;
+    }
+    
+    body.disabled-onepage-scroll .main section > img {
+      position: relative;
+      max-width: 80%;
+      bottom: 0;
+    }
+    body.disabled-onepage-scroll code {
+      width: 95%;
+      margin: 0 auto 25px;
+      float: none;
+      overflow: hidden;
+    }
+    
+    body.disabled-onepage-scroll .main section.page3 .page_container {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      right: 0;
+    }
+  
+  p {
+    color: #ffebee;
+  }
+  </style>
+  <script>
+    $(document).ready(function(){
+      $(".main").onepage_scroll({
+        sectionContainer: "section",
+        responsiveFallback: 600,
+        loop: false
+      });
+    });
+    
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="main">
+      
+      <section class="page1">
+        <div class="page_container">
+          <h1>Election Commission Of India</h1>
+          <h2 style=>State Election Commission</h2>
+      <div style="width:90%";>
+          <p style="text-align: justify; font-size:18px;">The power of superintendence, direction and control of all elections to the local government bodies vest with the State Election Commissions as envisaged in Article 243K of the Constitution of India. The Constitutional (73rd Amendment) Act, passed in 1992 by the Narasimha Rao government, came into force on April 24, 1993. It was meant to provide constitutional sanction to establish "democracy at the grassroots level as it is at the state level or national level" The State Election Commissioner has several unique powers pertaining to the elections to Local Bodies, which include the following. SEC chairs the Delimitation Commission which delimits local government constituencies. He has full powers to conduct local government elections including disciplinary powers over staff who are on election duty and assigns reserved posts and constituencies. The SEC can disqualify candidates who do not submit election accounts, members found guilty of defection and elected representative who do not convene the Grama Sabha.</p>
+          </div>
+        </div>
+      </section>
+      
+      <section class="page1">
+        <div class="page_container">
+          <h2>Modernization: <span style="font-size: 60px";>NOTA Symbol</span></h2>
+      <div style="width:90%;";>
+          <p style="text-align: justify; font-size:18px;"> 
+          The Election Commission had tried to bring improvements in election procedures by introduction of EVM – Electronic voting machines. It was thought that EVMs would reduce malpractices and improve efficiency. It was first tried out on an experimental basis in the state of Kerala for the 1982 Legislative Assembly Elections. After successful testing and legal inquires, the Commission took the decision to begin the use of EVMs. The Election Commission launched a web site of its own on 28 February 1998. It helps to provide accurate information, management, administration and also instant results of the elections. In 1998, Election Commission decided on a program for the 'computerization' of the electoral rolls. In an effort to prevent electoral fraud, in 1993 EPICs – Electorals Photo Identity Cards were issued. In the 2004 elections, it was mandatory to possess the card. But even ration cards and driving licenses is allowed to be used for election purposes. The introduction of Voter-verified paper audit trail (VVPAT) in eight Lok Sabha constituencies in 2014 Indian General Elections was a big achievement after the Supreme Court judgement in October 2013. Voter-verified paper audit trail (VVPAT) system was first used with EVMs in a by-poll in September 2013 in Noksen (Assembly Constituency) in Nagaland. VVPAT was used in gradual manner in all elections starting from September 2013- Mizoram Legislative Assembly election, 2013, Delhi Legislative Assembly election, 2013, Madhya Pradesh Legislative Assembly election, 2013, Rajasthan Legislative Assembly election, 2013, Chhattisgarh Legislative Assembly election, 2013, Indian general election, 2014, Maharashtra Legislative Assembly election, 2014, Haryana Legislative Assembly election, 2014, Jammu and Kashmir Legislative Assembly election, 2014, Jharkhand Legislative Assembly election, 2014. </p>
+      </div>        
+        </div>
+      </section>
+      
+      <section class="page1">
+        <div class="page_container" style="top:20%;">
+          <h2>Criticism</h2>
+      <div style="width:90%";>
+          <p style="text-align: justify; font-size:18px;">The Election Commission of India came into severe criticism when a RTI by disability activist Dr Satendra Singh revealed its ill-preparedness to safeguard electors with disabilities in General Elections 2014. There were many violations of Supreme Court order from 2014 to enfranchise persons with disabilities.Questions have been asked on the effectiveness of the Election Commission and the entity has often come under heavy criticism for not acting against the political parties who violated poll code and misused official machinery. Although the poll panel puts a limit on poll expenses, political parties hardly adhere to the “financial Lakshman Rekha”. It did vitiate the political atmosphere with large-scale corruption.
+
+          Sometimes, the Commission lacks enough teeth to enforce discipline in the electoral processes. Since the model code of conduct doesn’t have any statutory backing, it is not strictly enforced. The Commission has faced criticism for being unable to put an end to corruption in the electoral process.</p>
+      </div>
+        </div>
+      </section>
+    </div>
+    
+  </div>
+</body>
+</html>
